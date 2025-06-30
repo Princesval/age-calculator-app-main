@@ -1,0 +1,172 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --Purple500: hsl(259, 100%, 65%);
+    --Red400: hsl(0, 100%, 67%);
+    --White: hsl(0, 100%, 100%);
+    --Grey100: hsl(0, 0%, 94%);
+    --Grey200: hsl(0, 0%, 86%);
+    --Grey500: hsl(0, 1%, 44%);
+    --Black: hsl(0, 0%, 0%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Grey100);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 600px;
+    background-color: var(--White);
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 20px 20px 120px 20px;
+}
+
+#input-age-div {
+    display: flex;
+    text-transform: uppercase;
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.input-div label {
+    color: var(--Grey500);
+    font-weight: 700;
+    font-size: 0.7em;
+    margin-bottom: 8px;
+}
+
+.input-div input {
+    font-size: 1.5em;
+    width: 90px;
+    padding: 12px;
+    border: 1px solid var(--Grey200);
+    border-radius: 5px;
+    font-weight: 800;
+}
+
+.input-div input:hover {
+    border-color: var(--Purple500);
+}
+
+.input-div input::placeholder {
+    color: var(--Grey500);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.error-span {
+    color: var(--Red400);
+    font-size: 0.6em;
+    text-transform: capitalize;
+    margin-top: 5px;
+    display: none;
+}
+
+#button-div {
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    border: none;
+    border-top: 1px solid var(--Grey200);
+}
+
+#mobile-hr {
+    display: none;
+}
+
+#button-div button {
+    border: none;
+    background-color: var(--Purple500);
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#button-div button:hover {
+    background-color: var(--Black);
+}
+
+#btn-img {
+    width: 30px;
+}
+
+#result-div span{
+    font-size: 1em;
+    font-weight: 800;
+    letter-spacing: 10px;
+    color: var(--Purple500);
+}
+
+#result-div p {
+    color: var(--Black);
+    font-size: 4.2em;
+    margin: 0px;
+    font-weight: 800;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    color: var(--Purple500);
+    font-weight: 700;
+}
+
+@media(max-width: 600px) {
+    main {
+        width: 95vw;
+    }
+
+    #result-div p {
+        font-size: 3em;
+    }
+
+    #input-age-div {
+        display: flex;
+        box-sizing: border-box;
+        margin-bottom: 40px;
+        justify-content: space-around;
+    }
+
+    .input-div {
+        box-sizing: border-box;
+        width: 33%;
+        margin-right: 0px;
+    }
+
+    .input-div input{
+        box-sizing: border-box;
+        font-size: 1em;
+        width: 95%;
+    }
+
+    #mobile-hr {
+        display: block;
+    }
+
+    #button-div button {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+    
+}

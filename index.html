@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <main>
+    <div id="input-age-div">
+      <div class="input-div">
+        <label for="age-day" id="day-label">Day</label>
+        <input type="number" placeholder="dd" id="age-day">
+        <span id="day-error-span" class="error-span"></span>
+      </div>
+
+      <div class="input-div">
+        <label for="age-month" id="month-label">Month</label>
+        <input type="number" placeholder="mm" id="age-month">
+        <span id="month-error-span" class="error-span"></span>
+      </div>
+      
+      <div class="input-div">
+        <label for="age-year" id="year-label">Year</label>
+        <input type="number" placeholder="yyyy" id="age-year">
+        <span id="year-error-span" class="error-span"></span>
+      </div>
+    </div>
+
+    <div id="button-div">
+      <hr>
+      <button id="submit-btn">
+        <img id="btn-img" src="assets/images/icon-arrow.svg" alt="">
+      </button>
+      <hr id="mobile-hr">
+    </div>
+
+    <div id="result-div">
+      <p><span id="year-span">--</span> years</p>
+      <p><span id="month-span">--</span> months</p>
+      <p><span id="day-span">--</span> days</p>
+    </div>
+  </main>
+  
+  <footer class="attribution">
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/Princesval" target="_blank">João Vitor Princesval Caetano</a>.
+    </p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
