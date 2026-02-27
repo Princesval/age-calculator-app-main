@@ -32,7 +32,7 @@ function checkDate() {
     const userBirthDayValue = userBirthDay.value;
     const userBirthMonthValue = userBirthMonth.value;
     const userBirthYearValue = userBirthYear.value;
-
+    // Check if fields are empty
     if (checkEmptyDate(userBirthDayValue, userBirthMonthValue, userBirthYearValue) === true) {
         console.log('There are no empty fields');
         const numDay = Number(userBirthDayValue);
@@ -80,6 +80,7 @@ function validDate(day, month, year) {
     }
 }
 
+// Valid year (only years in the past)
 function validYear(day, month, year) {
     if (year > today.getFullYear()) {
         errorMsg(yearLabel, userBirthYear, yearErrorSpan, 'Must be in the past');
@@ -103,6 +104,7 @@ function validYear(day, month, year) {
     }
 }
 
+// Valid month
 function validMonth(month) {
     if (month < 1 || month > 12) {
         errorMsg(monthLabel, userBirthMonth, monthErrorSpan, 'Must be a valid month');
@@ -113,6 +115,7 @@ function validMonth(month) {
     }
 }
 
+// Day
 function validDay(day, month, year) {
     switch(month) {
         // Months with 31 days
@@ -156,6 +159,7 @@ function validDay(day, month, year) {
     }
 }
 
+// Individual check for empty fields
 function checkEmptyDate(day, month, year) {
     if (day == '' || month == '' || year == '') {
         if (day == '') {
@@ -184,7 +188,7 @@ function checkEmptyDate(day, month, year) {
         return true;
     }
 }
-
+// Error CSS
 function errorMsg(label, input, span, msg) {
     label.style.color = 'var(--Red400)';
     input.style.border = '1px solid var(--Red400)';
@@ -192,13 +196,14 @@ function errorMsg(label, input, span, msg) {
     span.innerHTML = msg;
 }
 
-
+// Clear error CSS
 function clearError(label, input, span) {
     label.style.color = 'var(--Grey500)';
     input.style.border = '1px solid var(--Grey200)';
     span.style.display = 'none';
 }
 
+// Click 
 submitBtn.addEventListener('click', () => {
     checkDate()
 })
