@@ -67,6 +67,7 @@ function checkDate() {
     };
 }
 
+// Valid function
 function validDate(day, month, year) {
     validDay(day, month, year);
     validMonth(month)
