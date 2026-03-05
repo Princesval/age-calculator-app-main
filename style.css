@@ -130,6 +130,7 @@ footer a {
     font-weight: 700;
 }
 
+/* media Q */
 @media(max-width: 600px) {
     main {
         width: 95vw;
